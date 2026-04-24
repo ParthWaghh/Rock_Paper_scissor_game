@@ -1,21 +1,23 @@
-# Rock Paper Scissors Game - Flowchar
-    A["Start"] --> B["Initialize<br/>user_score = 0<br/>computer_score = 0<br/>choices = rock/paper/scissors"]
-    B --> C["Generate computer choice<br/>from random selection"]
-    C --> D["Prompt user for input<br/>rock/paper/scissors/quit"]
-    D --> E{"User input<br/>== 'quit'?"}
-    E -->|Yes| F["Display 'Thanks for playing!'"]
-    F --> G["End"]
-    E -->|No| H{"User input<br/>in choices?"}
-    H -->|No| I["Display 'Invalid choice<br/>Please try again'"]
-    I --> C
-    H -->|Yes| J{"user_choice<br/>== computer_choice?"}
-    J -->|Yes| K["Display 'It's a tie!'"]
-    K --> L["Display Score"]
-    L --> C
-    J -->|No| M{"Determine Winner:<br/>Rock beats Scissors?<br/>Paper beats Rock?<br/>Scissors beats Paper?"}
-    M -->|User Wins| N["Display 'You win!'<br/>user_score += 1"]
-    N --> O["Display Score"]
-    O --> C
-    M -->|Computer Wins| P["Display 'Computer wins!'<br/>computer_score += 1"]
-    P --> Q["Display Score"]
-    Q --> C
+```mermaid
+flowchart TD
+A["Start"] --> B["Initialize<br/>user_score = 0<br/>computer_score = 0<br/>choices = rock/paper/scissors"]
+B --> C["Generate computer choice<br/>from random selection"]
+C --> D["Prompt user for input<br/>rock/paper/scissors/quit"]
+D --> E{"User input<br/>== 'quit'?"}
+E -->|Yes| F["Display 'Thanks for playing!'"]
+F --> G["End"]
+E -->|No| H{"User input<br/>in choices?"}
+H -->|No| I["Display 'Invalid choice<br/>Please try again'"]
+I --> C
+H -->|Yes| J{"user_choice<br/>== computer_choice?"}
+J -->|Yes| K["Display 'It's a tie!'"]
+K --> L["Display Score"]
+L --> C
+J -->|No| M{"Determine Winner:<br/>Rock beats Scissors?<br/>Paper beats Rock?<br/>Scissors beats Paper?"}
+M -->|User Wins| N["Display 'You win!'<br/>user_score += 1"]
+N --> O["Display Score"]
+O --> C
+M -->|Computer Wins| P["Display 'Computer wins!'<br/>computer_score += 1"]
+P --> Q["Display Score"]
+Q --> C
+```
